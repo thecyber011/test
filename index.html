@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>UP PIXEL STUDIO | Official Game Portal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
         <div class="loader-content">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigyZWwbM_9xLCqCUZf22PnmAFtkYJh4PQ8eeCXlWAYYszyvtEMj8y2QF4peqPEfNv7-iEsJdS15MqSKPot5Fye4aDOaxx-99Kqa_YCETF2JV8mZ2Np0VRQjr8eBxL0NGn7Ss02XLeCEk0d7V3Ctkpfr0PyqWRtsUH55uA3RxcAJIP342j55_wibay3N5Ul/s1600/Design%20sem%20nome%20(4).png" class="pulse-logo">
             <div class="progress-bar"><div class="progress-fill"></div></div>
-            <p>CONECTANDO AO SERVIDOR...</p>
+            <p>CONECTANDO UP PIXEL STUDIO...</p>
         </div>
     </div>
 
@@ -37,14 +37,10 @@
                         <li><a href="#" onclick="filterGames('simulacao')">Simulação</a></li>
                         <li><a href="#" onclick="filterGames('acao')">Ação</a></li>
                         <li><a href="#" onclick="filterGames('aventura')">Aventura</a></li>
-                        <li><a href="#" onclick="filterGames('puzzle')">Puzzle</a></li>
                     </ul>
                 </li>
                 <li><a href="#comunidade">COMUNIDADE</a></li>
                 <li><a href="#sobre">SOBRE</a></li>
-                <li class="mobile-search">
-                    <input type="text" placeholder="Buscar..." onkeyup="searchGames()">
-                </li>
             </ul>
 
             <div class="nav-actions pc-only">
@@ -60,71 +56,46 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="glitch" data-text="UP PIXEL STUDIO">UP PIXEL STUDIO</h1>
-            <p>O FUTURO DOS GAMES NO SEU NAVEGADOR</p>
-            <div class="hero-btns">
-                <a href="#games-grid" class="btn-primary shadow-neon">JOGAR AGORA</a>
-            </div>
+            <p>O PRÓXIMO NÍVEL EM CADA PIXEL</p>
+            <a href="#games-grid" class="btn-primary">JOGAR AGORA</a>
         </div>
     </section>
 
     <section class="highlights">
-        <div class="feat-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Rápido</h3>
-            <p>Carregamento instantâneo via Vercel.</p>
-        </div>
-        <div class="feat-card">
-            <i class="fas fa-trophy"></i>
-            <h3>Ranking</h3>
-            <p>Dispute o topo com outros players.</p>
-        </div>
-        <div class="feat-card">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Mobile</h3>
-            <p>Jogue onde quiser, quando quiser.</p>
-        </div>
+        <div class="feat-card"><i class="fas fa-bolt"></i><h3>Rápido</h3></div>
+        <div class="feat-card"><i class="fas fa-trophy"></i><h3>Ranking</h3></div>
+        <div class="feat-card"><i class="fas fa-mobile-alt"></i><h3>Mobile</h3></div>
     </section>
 
-    <section class="main-content" id="games-grid">
+    <main class="main-content" id="games-grid">
         <div class="section-header">
-            <h2><i class="fas fa-gamepad"></i> BIBLIOTECA DE JOGOS</h2>
-            <div class="filters-tags">
-                <button onclick="filterGames('todos')">Todos</button>
-                <button onclick="filterGames('simulacao')">Simulação</button>
-                <button onclick="filterGames('acao')">Ação</button>
-            </div>
+            <h2>BIBLIOTECA DE JOGOS</h2>
         </div>
         <div class="games-layout" id="gameList"></div>
-    </section>
+    </main>
 
     <div id="gameModal" class="modal">
         <div class="modal-wrapper">
             <div class="modal-header">
-                <h3 id="modalTitle">Nome do Jogo</h3>
+                <h3 id="modalTitle">Carregando...</h3>
                 <div class="modal-controls">
-                    <i class="fas fa-expand" onclick="toggleFullScreen()" title="Tela Cheia"></i>
+                    <i class="fas fa-expand" onclick="toggleFullScreen()"></i>
                     <span class="close-modal" onclick="closeGame()">&times;</span>
                 </div>
             </div>
             <div class="modal-body">
-                <iframe id="gameFrame" src="" allowfullscreen></iframe>
+                <iframe id="gameFrame" src="" allowfullscreen allow="autoplay; fullscreen; keyboard-map"></iframe>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="footer-top">
-            <div class="footer-col about">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigyZWwbM_9xLCqCUZf22PnmAFtkYJh4PQ8eeCXlWAYYszyvtEMj8y2QF4peqPEfNv7-iEsJdS15MqSKPot5Fye4aDOaxx-99Kqa_YCETF2JV8mZ2Np0VRQjr8eBxL0NGn7Ss02XLeCEk0d7V3Ctkpfr0PyqWRtsUH55uA3RxcAJIP342j55_wibay3N5Ul/s1600/Design%20sem%20nome%20(4).png" height="50">
-                <p>Desenvolvendo o melhor do entretenimento pixelado.</p>
+            <div class="footer-col">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigyZWwbM_9xLCqCUZf22PnmAFtkYJh4PQ8eeCXlWAYYszyvtEMj8y2QF4peqPEfNv7-iEsJdS15MqSKPot5Fye4aDOaxx-99Kqa_YCETF2JV8mZ2Np0VRQjr8eBxL0NGn7Ss02XLeCEk0d7V3Ctkpfr0PyqWRtsUH55uA3RxcAJIP342j55_wibay3N5Ul/s1600/Design%20sem%20nome%20(4).png" class="footer-logo">
+                <p>O melhor portal de jogos online.</p>
             </div>
-            <div class="footer-col links">
-                <h4>Menu</h4>
-                <a href="#">Privacidade</a>
-                <a href="#">Trabalhe Conosco</a>
-                <a href="#">API de Jogos</a>
-            </div>
-            <div class="footer-col social">
+            <div class="footer-col">
                 <h4>Siga-nos</h4>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-discord"></i></a>
@@ -133,7 +104,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 UP PIXEL STUDIO | Tecnologia Avançada em Jogos</p>
+            <p>&copy; 2026 UP PIXEL STUDIO</p>
         </div>
     </footer>
 
