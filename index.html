@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP PIXEL STUDIO | Official Game Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigyZWwbM_9xLCqCUZf22PnmAFtkYJh4PQ8eeCXlWAYYszyvtEMj8y2QF4peqPEfNv7-iEsJdS15MqSKPot5Fye4aDOaxx-99Kqa_YCETF2JV8mZ2Np0VRQjr8eBxL0NGn7Ss02XLeCEk0d7V3Ctkpfr0PyqWRtsUH55uA3RxcAJIP342j55_wibay3N5Ul/s1600/Design%20sem%20nome%20(4).png" class="pulse-logo">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <p>INICIALIZANDO UP PIXEL STUDIO...</p>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigyZWwbM_9xLCqCUZf22PnmAFtkYJh4PQ8eeCXlWAYYszyvtEMj8y2QF4peqPEfNv7-iEsJdS15MqSKPot5Fye4aDOaxx-99Kqa_YCETF2JV8mZ2Np0VRQjr8eBxL0NGn7Ss02XLeCEk0d7V3Ctkpfr0PyqWRtsUH55uA3RxcAJIP342j55_wibay3N5Ul/s1600/Design%20sem%20nome%20(4).png" alt="UP PIXEL Logo">
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">GÊNEROS <i class="fas fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="filterGames('todos')">Todos</a></li>
+                        <li><a href="#" onclick="filterGames('simulacao')">Simulação</a></li>
+                        <li><a href="#" onclick="filterGames('acao')">Ação</a></li>
+                        <li><a href="#" onclick="filterGames('aventura')">Aventura</a></li>
+                        <li><a href="#" onclick="filterGames('puzzle')">Puzzle</a></li>
+                    </ul>
+                </li>
+                <li><a href="#comunidade">COMUNIDADE</a></li>
+                <li><a href="#sobre">SOBRE NÓS</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="gameSearch" placeholder="Buscar jogo..." onkeyup="searchGames()">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="UP PIXEL STUDIO">UP PIXEL STUDIO</h1>
+            <p>Explorando novas fronteiras em cada pixel.</p>
+            <div class="hero-btns">
+                <a href="#games-grid" class="btn-primary shadow-neon">VER JOGOS</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content" id="games-grid">
+        <div class="section-header">
+            <h2><i class="fas fa-gamepad"></i> BIBLIOTECA DE JOGOS</h2>
+            <div class="line"></div>
+        </div>
+        <div class="games-layout" id="gameList"></div>
+    </section>
+
+    <div id="gameModal" class="modal">
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h3 id="modalTitle">Nome do Jogo</h3>
+                <span class="close-modal" onclick="closeGame()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe id="gameFrame" src="" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+                <button onclick="toggleFullScreen()"><i class="fas fa-expand"></i> Tela Cheia</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigyZWwbM_9xLCqCUZf22PnmAFtkYJh4PQ8eeCXlWAYYszyvtEMj8y2QF4peqPEfNv7-iEsJdS15MqSKPot5Fye4aDOaxx-99Kqa_YCETF2JV8mZ2Np0VRQjr8eBxL0NGn7Ss02XLeCEk0d7V3Ctkpfr0PyqWRtsUH55uA3RxcAJIP342j55_wibay3N5Ul/s1600/Design%20sem%20nome%20(4).png" height="50">
+                <p>A melhor experiência em jogos casuais e competitivos direto no seu navegador.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Siga a UP PIXEL</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UP PIXEL STUDIO | Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
